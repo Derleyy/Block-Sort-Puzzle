@@ -134,7 +134,7 @@ function verificarVitoria() {
         
         // Aguardar 5 segundos e resetar o jogo
         setTimeout(() => {
-            reset(); // Reseta o jogo
+            reset(); // Resetamos o jogo sem recarregar a página
             telaVitoria.style.display = 'none'; // Esconde a tela de vitória
         }, 5000);
     }
@@ -156,8 +156,10 @@ function reset() {
         container.innerHTML = "";
     });
 
-    vetorID = [];
-    criaBloco();
+    vetorID = [];  // Limpa o vetorID
+    pontua = 0;    // Reseta a pontuação
+    document.querySelector("#contador").innerHTML = pontua; // Atualiza o contador na tela
+    criaBloco();   // Cria os blocos novamente
 }
 
 // Função que trata o evento de 'dragover'
