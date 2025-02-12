@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/trevo.png" type="image/x-icon">
+    <title>Block Puzzle</title>
+</head>
+<body onload="criaBloco()">
+
+    <header>
+        <button type="button" id="bttn" onclick="reset()">RESET</button>
+
+        <span> SCORE: <span id="contador">0</span> </span>
+        <!-- transformar em string composta -->
+
+        <div id="scoreHistory"></div>
+    </header>
+
+    <main>
+        <section class="tubo"></section>
+
+        <section class="tubo"></section>
+
+        <section class="tubo"></section>
+
+        <section class="tubo"></section>
+
+        <section id="tubo-vazio"></section>
+    </main>
+
+    <footer>
+        <p>Este projeto é apenas <span>ilustrativo.</span> Estas páginas foram desenvolvidas como atividade da Disciplina Programação para Web I.</p>
+    </footer>
+
+    <div id="tela-vitoria" style="display: none;">
+        <h2>Você ganhou!</h2>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
